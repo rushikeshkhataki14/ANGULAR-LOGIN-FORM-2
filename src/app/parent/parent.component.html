@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 pt-5">
+      <form [formGroup]="formdata" (ngSubmit)="Submit(formdata.value)">
+        <h1>your information</h1>
+        <label >Enter Your Name</label>
+        <input type="text" class="form-control m-2" formControlName = "name">
+
+        <br />
+
+        <label >Enter Your Email</label>
+        <input type="email" class="form-control m-2" formControlName="email">
+
+        <br />
+        <label >Enter Your Mobile NO</label>
+        <input type="text" class="form-control m-2" formControlName="mob">
+
+        <br />
+        <label >Enter Your college name</label>
+        <input type="text" class="form-control m-2" formControlName="college">
+
+        <button class="btn btn-primary" type="submit">submit</button>
+
+      </form>
+
+
+    </div>
+
+    <!-- ------------- -->
+    <div class="col-lg-6">
+      <app-child [studentData] = "studentData"></app-child>
+    </div>
+  </div>
+</div>
+
